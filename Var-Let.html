@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Var e Let</title>
+
+		
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<!-- Your custom script here -->
+		
+		<script type="text/babel">
+/*
+			//3escopos: globla, função e bloco
+			//variavel (serie) nivel global
+			var serie = 'friends'
+			function x() {
+				//variavel nivel de função
+				var serie = 'game of throne'
+				console.log(serie)
+
+
+				if (true) {
+					console.log(serie)
+				}
+			}
+			x()
+
+			if (true) {
+				console.log(serie)
+			}
+*/	
+			//let só funciona a nivel de bloco
+			if (true) {
+				let serie = 'friends'
+
+				console.log('serie')
+			}
+
+			console.log(serie)
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>
