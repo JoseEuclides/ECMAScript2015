@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>OO - abstração</title>
+
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<!-- Your custom script here -->
+		
+		<script type="text/babel">
+			//crianco uma claase
+			class ContaBancaria{
+				// agencia
+				// numeroConta
+				// saldo
+				// limite
+
+				constructor(){
+					//definindo atributos
+					this.agencia = 1075
+					this.numeroConta = 8351125
+					this.saldo = 50
+					this.limite = 450
+				}
+
+				 depositar(varlorDeposito) {
+					this.saldo += varlorDeposito
+				}
+
+				sacar(valorSaque){
+					this.saldo -= valorSaque
+				}
+
+				consultarSaldo(){
+					return this.saldo
+				}
+
+			}
+
+			let x = new ContaBancaria()
+			let y = new ContaBancaria()
+			
+
+			console.log(x.consultarSaldo())
+			x.depositar(450)
+			console.log(x.consultarSaldo())
+			x.sacar(200)
+			console.log(x.consultarSaldo())
+			
+
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>

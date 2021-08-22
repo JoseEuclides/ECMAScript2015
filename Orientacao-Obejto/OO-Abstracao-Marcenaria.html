@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>OO - abstração Marcenaria</title>
+
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<!-- Your custom script here -->
+		
+		<script type="text/babel">
+			
+			class Cadeira{
+
+				constructor(qtd_pernas, giratoria, cor){
+					this.qtd_pernas = qtd_pernas
+					this.giratoria = giratoria
+					this.cor = cor
+				}
+
+				girarCadeira(giratoria){
+					if (this.giratoria === true) {
+						console.log('Cadeira Giratoria')
+					}else{
+						console.log('Cadeira não pe Giratoria')
+					}
+				}
+			}
+		
+			let cadeira = new Cadeira(4, false, 'azul')			
+			console.log(cadeira)
+			cadeira.girarCadeira()
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>
