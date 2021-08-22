@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>OO - Polimorfismo</title>
+
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<script type="text/babel">
+			
+				class Animal{
+				constructor(cor, tamanho, peso){
+					this.cor = cor
+					this.tamanho = tamanho
+					this.peso = peso
+				}
+
+				dormir(){
+					console.log('Domir')
+				}
+			}
+
+			class Passaro extends Animal{
+				constructor(bico,  cor, tamanho, peso){
+					super(cor, tamanho, peso)
+					this.bico = bico
+				}
+
+				voar(){
+					console.log('voar')
+				}
+
+				
+			}
+
+			class Papagaio extends Passaro{
+				constructor(sabeFalar,  cor, tamanho, peso){
+					//recebe parametro da classe pai
+					super('medio',  cor, tamanho, peso)
+					this.sabeFalar = sabeFalar
+				}
+
+				falar(){
+					console.log('falar')
+				}
+
+			}
+
+			class Avestruz extends Passaro{
+				constructor(){
+					super('grande',  'Branco - preto', 250, 15000)
+
+				}
+
+				enterrarCabeca(){
+					console.log('enterrar a cabeça')
+				}
+
+				voar(){
+					console.log('nao voa')
+				}
+			}
+
+
+			let papagaio = new Papagaio(true, 'verde', 25, 350)
+			//papagaio.voar()
+
+			let avestruz =  new Avestruz()
+			avestruz.enterrarCabeca()
+			avestruz.voar()	
+
+
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>
