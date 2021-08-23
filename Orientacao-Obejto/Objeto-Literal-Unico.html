@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>OO - Objeto Literal Unico</title>
+
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<script type="text/babel">
+		
+			
+		let assinatura = {
+			idCliente: 1000,
+			descricao: 'Acesso a internet',
+			status(){
+				console.log('Ativo')
+			}
+		}
+
+		console.log(assinatura.descricao)
+
+		//nao é um objeto mas Y faz um referencia ao obejto assinatura
+		//atravez da vaiavel y
+		let y = assinatura
+
+		console.log(y.descricao)
+
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>
